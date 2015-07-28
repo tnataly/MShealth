@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.microsofthealth.net/V1/me/Devices/FFFF1700-FFFF-FFFF-8529-454E11000210
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - bearer EwCYAvF0BAAUkWhN6f8bO0+g89MA1fmZueWyRkQAAZydEds0NCFC+I6B0A8YBG3Alye694ywVTm8bfzD9uXn8FTZMQ4fnVubUZE+zCdwkFqLDCEY63HX7Gq10uS8poUpGdIpWP7lQNdLXRsPG9KOtn5nncAY4LW63qpnFshF4WFOPARPm2P8X3+po/FOuLyEAGlY4Lj/Wqs5hT2g7GuZu3QJKub+/JZTfYpzn418MzEFUMrIh8vP0WZkDfeG8h/rS89nJpJTdZVxSNRJutwyfJF1gGJlC00JDBJ0XssKlNdTZ4I30IA4xhspz6hgB4OdY69pq8oJcHC0oJG4k0wqySx6QhK4MCcfv//DxCDj/QxJab+8yykHW8GnkBrbGFMDZgAACFctWYgySzykaAHY3rwkLDfE6ehJf4PeEQJA+VSES3iSliIGLwsbqL9twSV03XKluCcCf0B20OstyqwNeYEUShquunl0AeE6/Wyn45QTEfD6yX7bRCC5aA2SdVNB0Oi8pYWTvkRLoBfVNi+MMyfFnSzHGcuLM8h/5hbIjA9qJcNl6UMTzJ/XJsEfbVetvuXq86sKX/w+BMAnTwx8G8BU0tggAdlnjshCBDBo/TPSeUnzOC8xrERjuPONAaSyUIee3fV1ZmewnTTHNBmYCmKllXIzxEpKqG8HoGVxQ7NffgmRnQ/gb3ABXP28XAf257iqi+gKpcuRbWN4Pc+kLoB3Bm3HuccrOiAmjTx2prTGvZMi0sb3N+LdcvRPRHw/ty0RLnunwk+cv0PT5V3nXT4FCekIj27/V/RzlmJFCAkYzCpHbLnO0wltv2bgiUktqMLJ+sdNeLpYhWPfMqDDaUKmvJW95k/NKgHjG9MPENTrO/LlozGAAQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      Appex-Activity-Id:
+      - 7f4e0314-940b-482f-b475-528ed8f4bec5
+      Set-Cookie:
+      - ai_session=247dc226f59c4187a8e7368fc9510e95|2015-07-23T13:20:00.9666615+00:00|2015-07-23T13:20:02.4507154+00:00;
+        expires=Thu, 23-Jul-2015 13:50:02 GMT; path=/
+      - ai_user=b0b75b87dd854dc1bdc71dd10d7ea683|2015-07-23T13:20:00.9666615+00:00;
+        expires=Fri, 31-Dec-9999 23:59:59 GMT; path=/
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 23 Jul 2015 13:20:02 GMT
+      Content-Length:
+      - '84'
+    body:
+      encoding: UTF-8
+      string: '{"id":"FFFF1700-FFFF-FFFF-8529-454E11000210","displayName":"","deviceFamily":"Band"}'
+    http_version: 
+  recorded_at: Thu, 23 Jul 2015 13:20:02 GMT
+recorded_with: VCR 2.9.3

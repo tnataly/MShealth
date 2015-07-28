@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.microsofthealth.net/V1/me/Profile
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - bearer EwCYAvF0BAAUkWhN6f8bO0+g89MA1fmZueWyRkQAAWBDl7ndLhx/1NGqG6GepYf0RxWk5W1AaLgoSyMBYhy2hGEiRhVnNCq53I4L+TDT60InqSVWSO3JjRb9mze8lyRW26560e3Rg7ik9ZP+Gt54NBZpbV1nxzuL6Dm67jWnbU3A7LbzkiUwPYbH78J5PHbdVhzosvhBk01Hg7NS+SYMJJwUjHtbl6uq0zCka0SB8+am0ubgNtBEnPDwYyMf4YvqnxHlvwYecsx2nbXsWIjD4mlPtXIq431sRNmMyP1RJoF57HgZIcQUfqHCtqVF4DcYX9gKn9JCh1C4jHDRRDie4FunvOv4mP+jhvYuCyLcxKXcdq1XLfrl8kNLcZN1lwkDZgAACGvqWinclXAOaAEjCXwNxb1AYydqZXnnb/T4zY+5oQXX6dcyk1oJq9MU7otqLW5SrjSmKiLnRYJAr4EGUUDnJQdBuyn93Rj8MY50ZtJYL+t1ysT0/MrAdqYrC5+xrSPCe0/CIn1J3FQjcTdtDkiwCajusUjYhZDBQ0DgAUzW23wE3eeSkmjYtQ0uZHFHV+RvhtdLoYhtvjX0BlNiZ8p6Jlp2MPTNRiOdS2Z7EpyMrrM9sM3lDuBh3NmsDPVAuApTEUvYu7ag2+C+mGvAnEvjKKa1Pq67WIP5P0kShKleV35w1F4D85+Q5x3QFM15zheJuikKmcsFvBXSGrwaRBlwuNe6ZWeQQq7VtWIwS4v7SnikjaAhSlyRdkmKIFZAcxj3xxfNYfySdoAQLUR0cpF5/mS8PzBcNwO3zirb3P5R84bZ3DvQBSlWzn4+jYGIt5KrWIW0TRDzRrCci3sLSu6pjUdLPuGWYiOF4GCgSTc/4cingN6AAQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      Appex-Activity-Id:
+      - 7495fae7-4061-48d0-8d61-e71414546fd2
+      Set-Cookie:
+      - ai_session=28fe915cb22d450d97a345ac156d39ba|2015-07-23T12:04:54.2031627+00:00|2015-07-23T12:04:55.3191864+00:00;
+        expires=Thu, 23-Jul-2015 12:34:55 GMT; path=/
+      - ai_user=9fd8a4e4ade74428b7e7b537d2e4e215|2015-07-23T12:04:54.2031627+00:00;
+        expires=Fri, 31-Dec-9999 23:59:59 GMT; path=/
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 23 Jul 2015 12:04:55 GMT
+      Content-Length:
+      - '176'
+    body:
+      encoding: UTF-8
+      string: '{"firstName":"weihua","birthdate":"1994-01-01T14:05:16.000+00:00","postalCode":"","gender":"Male","height":1830,"weight":58000,"lastUpdateTime":"2015-07-23T08:01:32.814+00:00"}'
+    http_version: 
+  recorded_at: Thu, 23 Jul 2015 12:04:56 GMT
+recorded_with: VCR 2.9.3
