@@ -33,7 +33,7 @@ class ClientTest < Minitest::Test
 
   def test_device
     VCR.use_cassette('one_device') do
-      device = @client.device('FFFF1700-FFFF-FFFF-8529-454E11000210')
+      device = @client.device(id:'FFFF1700-FFFF-FFFF-8529-454E11000210')
       assert_equal MShealth::Mash, device.class
       assert_equal 'Band', device.device_family
     end

@@ -32,7 +32,7 @@ module MShealth
       devices
     end
 
-    def device(id)
+    def device(id:)
       response = handle_response("/"+configuration.api_version+"/me/Devices/"+id,
       :headers => {"Authorization" => "bearer "+configuration.token})
       MShealth::Mash.new(response)
@@ -75,6 +75,7 @@ module MShealth
 
       result
     end
+    
 
     def handle_response(*args)
       response = self.class.get(*args)

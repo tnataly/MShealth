@@ -13,8 +13,9 @@ module MShealth
 
     private
     def convert_time(mash)
+      dic = ['birthdate','last_successful_sync','day_id']
       mash.each do |k,v|
-        if k.to_s.include?("time")
+        if dic.include?(k.to_s) or k.to_s.include?("time")
           mash[k] = Time.iso8601(v)
         end
       end
