@@ -19,7 +19,7 @@ module MShealth
     def profile
       response = handle_response("/"+configuration.api_version+"/me/Profile",
       :headers => {"Authorization" => "bearer "+configuration.token})
-      MShealth::Model::Profile.new(response)
+      MShealth::Mash.new(response)
     end
 
     def devices
@@ -27,7 +27,7 @@ module MShealth
       :headers => {"Authorization" => "bearer "+configuration.token})
       devices = []
       response['deviceProfiles'].each do |device|
-        devices << MShealth::Model::Device.new(device)
+        devices << MShealth::Mash.new(device)
       end
       devices
     end
@@ -35,7 +35,7 @@ module MShealth
     def device(id)
       response = handle_response("/"+configuration.api_version+"/me/Devices/"+id,
       :headers => {"Authorization" => "bearer "+configuration.token})
-      MShealth::Model::Device.new(response)
+      MShealth::Mash.new(response)
     end
 
     def summary(period:,start_time:,**options)
@@ -63,13 +63,13 @@ module MShealth
       result = []
 
       response['summaries'].each do |summary|
-        result << MShealth::Model::Summary.new(summary)
+        result << MShealth::Mash.new(summary)
       end
 
       while response.key?("nextPage")
         response = handle_response(response['nextPage'],:headers => {"Authorization" => "bearer "+configuration.token})
         response['summaries'].each do |summary|
-          result << MShealth::Model::Summary.new(summary)
+          result << MShealth::Mash.new(summary)
         end
       end
 

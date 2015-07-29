@@ -27,7 +27,6 @@ class ClientTest < Minitest::Test
     VCR.use_cassette('devices') do
       devices = @client.devices
       assert_equal Array, devices.class
-      assert_equal MShealth::Model::Device, devices[0].class
       assert_equal 'Band', devices[0].device_family
     end
   end
@@ -35,7 +34,7 @@ class ClientTest < Minitest::Test
   def test_device
     VCR.use_cassette('one_device') do
       device = @client.device('FFFF1700-FFFF-FFFF-8529-454E11000210')
-      assert_equal MShealth::Model::Device, device.class
+      assert_equal MShealth::Mash, device.class
       assert_equal 'Band', device.device_family
     end
   end
@@ -45,20 +44,18 @@ class ClientTest < Minitest::Test
       summary = @client.summary(period:'daily',start_time:Time.new(2015,7,27))
       assert_equal Array, summary.class
       assert_equal 3, summary.length
-      assert_equal MShealth::Model::Summary, summary[0].class
+      assert_equal MShealth::Mash, summary[0].class
       assert_equal 'Daily', summary[0].period
       assert_equal Time.iso8601("2015-07-28T23:00:00.000+00:00"), summary[0].start_time
 
-      calories = summary[0].calories_summary
-      assert_equal MShealth::Model::CaloriesSummary, calories.class
+
+      calories = summary[0].calories_burned_summary
       assert_equal "Daily", calories.period
 
       heartrate = summary[0].heart_rate_summary
-      assert_equal MShealth::Model::HeartRateSummary, heartrate.class
       assert_equal "Daily", heartrate.period
 
       distance = summary[0].distance_summary
-      assert_equal MShealth::Model::DistanceSummary, distance.class
       assert_equal "Daily", distance.period
     end
   end
@@ -66,7 +63,6 @@ class ClientTest < Minitest::Test
   def test_summary_hourly
     VCR.use_cassette('hourly_summary') do
       summary = @client.summary(period:'hourly',start_time:Time.new(2015,6,27),end_time:Time.new(2015,7,20))
-      puts summary[500].to_yaml
       assert summary.size > 500
     end
   end
