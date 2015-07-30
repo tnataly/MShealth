@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.microsofthealth.net/V1/me/Activities?endTime=2015-07-29T00:00:00%2B01:00&startTime=2015-05-27T00:00:00%2B01:00
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - bearer EwCYAvF0BAAUkWhN6f8bO0+g89MA1fmZueWyRkQAAcDbnk+vVSq4D4OFQFz37/ATUC35/sFljFvutv0kmFGiLhA159E68FD0+bLgUPtdfwAmDqzpS/FBIKefUnPghIOhnmWMEPp4kXJF4+91ezg4fi/rka/KpmOPqzRCvT4hS4FeQRQFtsS9B7ri70r28qE0HwOztwegW1Q3uzQYYV9hNfr2YvKXJh52m6WUGTgf63XAfaK7eLFoIP47ZCW3Q6kLguszg4xYyZh5A2K4CtsoZiX0rgdHXuqiVok4yLqWxv+q9B5y1y+8APGid8AJMsWm+GROcZglR+qNvsHqq/OPmkejWVDLrlFxPfi+smTH7zJ4n/5XCiFCbVKIvx5oXE8DZgAACEsdVf7+Sjl2aAEZ+/GLkHRIpCFi4MbqaZCyHBnqMAsqoEvLePEt0aanuAG4hRWLFhyEdMLlZIIbSiA6lEs9xPZxkeKQaCwZLuBwTGS60Ee7o1n/8DmdV0fDd+DazT9586n85jxYpW63T62SoB/vAirFkGQbHvJmLp8XQOlGeHheUe+uP5IZ4/6Ze+GpqHPQN1xt6eL41BBlTb+JrQzCLie++vjEzht4r1fERrXz2fgxVkCysmdr3TftrqPnSF7ANupeRooAHcsG9nWWW8tb+u0xI8H1xmmNODSq3Vpa4bCzkzh+LN+iq7ewEr9UwFLvlxdDqzjkUApDPoUdpVN2cTOpuSkjnmd67YX/EjIo0uhxKWuKWfn78F3X9DqcBQwIJcol3BD7nD5jD+mTSKeyba69DnznX38nJZ3wRtpLJPQMdoLDo7T+6QX+9QgF0TElSnatcdrjlySPI8s1RTyX4L1KiUy9FdRZzmGE0Ox82W7llmSAAQ==
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      Www-Authenticate:
+      - Bearer realm="mshealth" error="invalid_token"
+      X-Aspnet-Version:
+      - 4.0.30319
+      Appex-Activity-Id:
+      - e5a44c75-908e-4512-8fc2-1f728de593ec
+      Set-Cookie:
+      - ai_session=b5013ec5a86a432b90aa8d13e4a2df6f|2015-07-30T14:59:40.5991622+00:00|2015-07-30T14:59:40.5991622+00:00;
+        expires=Thu, 30-Jul-2015 15:29:40 GMT; path=/
+      - ai_user=6c58a5f90ec046f68f7bd2c8ca561127|2015-07-30T14:59:40.5991622+00:00;
+        expires=Fri, 31-Dec-9999 23:59:59 GMT; path=/
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 30 Jul 2015 14:59:40 GMT
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 30 Jul 2015 14:59:40 GMT
+recorded_with: VCR 2.9.3

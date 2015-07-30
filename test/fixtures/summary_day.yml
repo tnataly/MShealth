@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.microsofthealth.net/V1/me/Summaries/Daily?startTime=2015-07-27T00:00:00%2B01:00
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - bearer EwCYAvF0BAAUkWhN6f8bO0+g89MA1fmZueWyRkQAAcDbnk+vVSq4D4OFQFz37/ATUC35/sFljFvutv0kmFGiLhA159E68FD0+bLgUPtdfwAmDqzpS/FBIKefUnPghIOhnmWMEPp4kXJF4+91ezg4fi/rka/KpmOPqzRCvT4hS4FeQRQFtsS9B7ri70r28qE0HwOztwegW1Q3uzQYYV9hNfr2YvKXJh52m6WUGTgf63XAfaK7eLFoIP47ZCW3Q6kLguszg4xYyZh5A2K4CtsoZiX0rgdHXuqiVok4yLqWxv+q9B5y1y+8APGid8AJMsWm+GROcZglR+qNvsHqq/OPmkejWVDLrlFxPfi+smTH7zJ4n/5XCiFCbVKIvx5oXE8DZgAACEsdVf7+Sjl2aAEZ+/GLkHRIpCFi4MbqaZCyHBnqMAsqoEvLePEt0aanuAG4hRWLFhyEdMLlZIIbSiA6lEs9xPZxkeKQaCwZLuBwTGS60Ee7o1n/8DmdV0fDd+DazT9586n85jxYpW63T62SoB/vAirFkGQbHvJmLp8XQOlGeHheUe+uP5IZ4/6Ze+GpqHPQN1xt6eL41BBlTb+JrQzCLie++vjEzht4r1fERrXz2fgxVkCysmdr3TftrqPnSF7ANupeRooAHcsG9nWWW8tb+u0xI8H1xmmNODSq3Vpa4bCzkzh+LN+iq7ewEr9UwFLvlxdDqzjkUApDPoUdpVN2cTOpuSkjnmd67YX/EjIo0uhxKWuKWfn78F3X9DqcBQwIJcol3BD7nD5jD+mTSKeyba69DnznX38nJZ3wRtpLJPQMdoLDo7T+6QX+9QgF0TElSnatcdrjlySPI8s1RTyX4L1KiUy9FdRZzmGE0Ox82W7llmSAAQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      Appex-Activity-Id:
+      - 02e8933a-2bda-40e1-bc2c-cd36b88b9f03
+      Set-Cookie:
+      - ai_session=a6a39cf03e9948b4815bc79223f520f3|2015-07-30T13:44:29.5278279+00:00|2015-07-30T13:44:49.1939702+00:00;
+        expires=Thu, 30-Jul-2015 14:14:49 GMT; path=/
+      - ai_user=7837f229bb84470ba58d9d03ce9b7076|2015-07-30T13:44:29.5278279+00:00;
+        expires=Fri, 31-Dec-9999 23:59:59 GMT; path=/
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 30 Jul 2015 13:44:49 GMT
+      Content-Length:
+      - '1544'
+    body:
+      encoding: UTF-8
+      string: '{"summaries":[{"userId":"94d3c7a8-941a-472b-93fe-ea86a9f5b438","startTime":"2015-07-30T23:00:00.000+00:00","endTime":"2015-07-31T23:00:00.000+00:00","period":"Daily","duration":"P1D","stepsTaken":0,"caloriesBurnedSummary":{"period":"Daily"},"heartRateSummary":{"period":"Daily"},"distanceSummary":{"period":"Daily"}},{"userId":"94d3c7a8-941a-472b-93fe-ea86a9f5b438","startTime":"2015-07-29T23:00:00.000+00:00","endTime":"2015-07-30T23:00:00.000+00:00","period":"Daily","duration":"P1D","stepsTaken":0,"caloriesBurnedSummary":{"period":"Daily"},"heartRateSummary":{"period":"Daily"},"distanceSummary":{"period":"Daily"}},{"userId":"94d3c7a8-941a-472b-93fe-ea86a9f5b438","startTime":"2015-07-28T23:00:00.000+00:00","endTime":"2015-07-29T23:00:00.000+00:00","period":"Daily","duration":"P1D","stepsTaken":0,"caloriesBurnedSummary":{"period":"Daily"},"heartRateSummary":{"period":"Daily"},"distanceSummary":{"period":"Daily"}},{"userId":"94d3c7a8-941a-472b-93fe-ea86a9f5b438","startTime":"2015-07-27T23:00:00.000+00:00","endTime":"2015-07-28T23:00:00.000+00:00","period":"Daily","duration":"P1D","stepsTaken":0,"caloriesBurnedSummary":{"period":"Daily"},"heartRateSummary":{"period":"Daily"},"distanceSummary":{"period":"Daily"}},{"userId":"94d3c7a8-941a-472b-93fe-ea86a9f5b438","startTime":"2015-07-26T23:00:00.000+00:00","endTime":"2015-07-27T23:00:00.000+00:00","period":"Daily","duration":"P1D","stepsTaken":0,"caloriesBurnedSummary":{"period":"Daily"},"heartRateSummary":{"period":"Daily"},"distanceSummary":{"period":"Daily"}}],"itemCount":5}'
+    http_version: 
+  recorded_at: Thu, 30 Jul 2015 13:44:48 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.microsofthealth.net/V1/me/Activities?endTime=2015-07-29T00:00:00%2B01:00&startTime=2015-05-27T00:00:00%2B01:00
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - bearer EwCYAvF0BAAUkWhN6f8bO0+g89MA1fmZueWyRkQAAcDbnk+vVSq4D4OFQFz37/ATUC35/sFljFvutv0kmFGiLhA159E68FD0+bLgUPtdfwAmDqzpS/FBIKefUnPghIOhnmWMEPp4kXJF4+91ezg4fi/rka/KpmOPqzRCvT4hS4FeQRQFtsS9B7ri70r28qE0HwOztwegW1Q3uzQYYV9hNfr2YvKXJh52m6WUGTgf63XAfaK7eLFoIP47ZCW3Q6kLguszg4xYyZh5A2K4CtsoZiX0rgdHXuqiVok4yLqWxv+q9B5y1y+8APGid8AJMsWm+GROcZglR+qNvsHqq/OPmkejWVDLrlFxPfi+smTH7zJ4n/5XCiFCbVKIvx5oXE8DZgAACEsdVf7+Sjl2aAEZ+/GLkHRIpCFi4MbqaZCyHBnqMAsqoEvLePEt0aanuAG4hRWLFhyEdMLlZIIbSiA6lEs9xPZxkeKQaCwZLuBwTGS60Ee7o1n/8DmdV0fDd+DazT9586n85jxYpW63T62SoB/vAirFkGQbHvJmLp8XQOlGeHheUe+uP5IZ4/6Ze+GpqHPQN1xt6eL41BBlTb+JrQzCLie++vjEzht4r1fERrXz2fgxVkCysmdr3TftrqPnSF7ANupeRooAHcsG9nWWW8tb+u0xI8H1xmmNODSq3Vpa4bCzkzh+LN+iq7ewEr9UwFLvlxdDqzjkUApDPoUdpVN2cTOpuSkjnmd67YX/EjIo0uhxKWuKWfn78F3X9DqcBQwIJcol3BD7nD5jD+mTSKeyba69DnznX38nJZ3wRtpLJPQMdoLDo7T+6QX+9QgF0TElSnatcdrjlySPI8s1RTyX4L1KiUy9FdRZzmGE0Ox82W7llmSAAQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      Appex-Activity-Id:
+      - 701119d0-44b6-4f91-8cd3-2e2a04d57a7e
+      Set-Cookie:
+      - ai_session=6b0361077051440a9fb137d2a9b2b58e|2015-07-30T13:52:05.0674094+00:00|2015-07-30T13:52:07.0339770+00:00;
+        expires=Thu, 30-Jul-2015 14:22:07 GMT; path=/
+      - ai_user=f48083badd72434e9e20616fa718862b|2015-07-30T13:52:05.0674094+00:00;
+        expires=Fri, 31-Dec-9999 23:59:59 GMT; path=/
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 30 Jul 2015 13:52:06 GMT
+      Content-Length:
+      - '4940'
+    body:
+      encoding: UTF-8
+      string: '{"runActivities":[{"activityType":"Run","performanceSummary":{"finishHeartRate":97,"recoveryHeartRateAt1Minute":71,"heartRateZones":{"underAerobic":2,"aerobic":2,"fitnessZone":15,"healthyHeart":9}},"distanceSummary":{"period":"Activity","totalDistance":317790,"actualDistance":317790,"waypointDistance":2500,"pace":496588},"splitDistance":160934,"id":"2519647921241112976","startTime":"2015-07-21T19:57:55.888+00:00","endTime":"2015-07-21T20:24:13.888+00:00","dayId":"2015-07-21T00:00:00.000+00:00","duration":"PT26M18S","caloriesBurnedSummary":{"period":"Activity","totalCalories":193},"heartRateSummary":{"period":"Activity","averageHeartRate":124,"peakHeartRate":156,"lowestHeartRate":80}}],"sleepActivities":[{"activityType":"Sleep","awakeDuration":"PT52M52S","sleepDuration":"PT7H35M1S","numberOfWakeups":5,"fallAsleepDuration":"PT6M25S","sleepEfficiencyPercentage":91,"totalRestlessSleepDuration":"PT5H29M3S","totalRestfulSleepDuration":"PT2H5M58S","restingHeartRate":50,"fallAsleepTime":"2015-07-22T00:42:57.987+00:00","wakeupTime":"2015-07-22T09:01:58.237+00:00","id":"2519647754070120053","startTime":"2015-07-22T00:36:32.987+00:00","endTime":"2015-07-22T09:04:25.987+00:00","dayId":"2015-07-21T00:00:00.000+00:00","duration":"PT8H27M53S","caloriesBurnedSummary":{"period":"Activity","totalCalories":640},"heartRateSummary":{"period":"Activity","averageHeartRate":59,"peakHeartRate":80,"lowestHeartRate":47}},{"activityType":"Sleep","awakeDuration":"PT1H35M51S","sleepDuration":"PT7H41M24S","numberOfWakeups":11,"fallAsleepDuration":"PT34M34S","sleepEfficiencyPercentage":86,"totalRestlessSleepDuration":"PT4H51M59S","totalRestfulSleepDuration":"PT2H49M25S","restingHeartRate":51,"fallAsleepTime":"2015-07-07T22:04:48.796+00:00","wakeupTime":"2015-07-08T06:55:53.676+00:00","id":"2519659961852038381","startTime":"2015-07-07T21:30:14.796+00:00","endTime":"2015-07-08T07:07:14.796+00:00","dayId":"2015-07-07T00:00:00.000+00:00","duration":"PT9H37M","caloriesBurnedSummary":{"period":"Activity","totalCalories":731},"heartRateSummary":{"period":"Activity","averageHeartRate":59,"peakHeartRate":124,"lowestHeartRate":48}},{"activityType":"Sleep","awakeDuration":"PT34M3S","sleepDuration":"PT3H31M10S","numberOfWakeups":4,"fallAsleepDuration":"PT3M27S","sleepEfficiencyPercentage":88,"totalRestlessSleepDuration":"PT2H36M25S","totalRestfulSleepDuration":"PT54M45S","restingHeartRate":50,"fallAsleepTime":"2015-07-03T15:41:36.096+00:00","wakeupTime":"2015-07-03T19:40:54.628+00:00","id":"2519663629109031219","startTime":"2015-07-03T15:38:09.096+00:00","endTime":"2015-07-03T19:43:22.096+00:00","dayId":"2015-07-03T00:00:00.000+00:00","duration":"PT4H5M13S","caloriesBurnedSummary":{"period":"Activity","totalCalories":304},"heartRateSummary":{"period":"Activity","averageHeartRate":58,"peakHeartRate":93,"lowestHeartRate":45}},{"activityType":"Sleep","awakeDuration":"PT1H41M","sleepDuration":"PT44M20S","numberOfWakeups":1,"fallAsleepDuration":"PT1H13M54S","sleepEfficiencyPercentage":90,"totalRestlessSleepDuration":"PT19M13S","totalRestfulSleepDuration":"PT25M7S","restingHeartRate":55,"fallAsleepTime":"2015-07-03T07:41:08.817+00:00","wakeupTime":"2015-07-03T08:29:55.734+00:00","id":"2519663959651826308","startTime":"2015-07-03T06:27:14.817+00:00","endTime":"2015-07-03T08:52:34.817+00:00","dayId":"2015-07-03T00:00:00.000+00:00","duration":"PT2H25M20S","caloriesBurnedSummary":{"period":"Activity","totalCalories":190},"heartRateSummary":{"period":"Activity","averageHeartRate":64,"peakHeartRate":83,"lowestHeartRate":51}},{"activityType":"Sleep","awakeDuration":"PT26M7S","sleepDuration":"PT4H35M24S","fallAsleepDuration":"PT22M10S","sleepEfficiencyPercentage":99,"totalRestlessSleepDuration":"PT3H50M35S","totalRestfulSleepDuration":"PT44M49S","restingHeartRate":53,"fallAsleepTime":"2015-07-02T21:00:24.222+00:00","wakeupTime":"2015-07-03T01:37:18.095+00:00","id":"2519664313057773273","startTime":"2015-07-02T20:38:14.222+00:00","endTime":"2015-07-03T01:39:45.222+00:00","dayId":"2015-07-02T00:00:00.000+00:00","duration":"PT5H1M31S","caloriesBurnedSummary":{"period":"Activity","totalCalories":386},"heartRateSummary":{"period":"Activity","averageHeartRate":62,"peakHeartRate":94,"lowestHeartRate":49}},{"activityType":"Sleep","awakeDuration":"PT1H6M1S","sleepDuration":"PT3H16M5S","numberOfWakeups":4,"fallAsleepDuration":"PT37M56S","sleepEfficiencyPercentage":88,"totalRestlessSleepDuration":"PT2H40M37S","totalRestfulSleepDuration":"PT35M28S","restingHeartRate":60,"fallAsleepTime":"2015-07-02T12:00:43.965+00:00","wakeupTime":"2015-07-02T15:42:26.572+00:00","id":"2519664646320348987","startTime":"2015-07-02T11:22:47.965+00:00","endTime":"2015-07-02T15:44:53.965+00:00","dayId":"2015-07-02T00:00:00.000+00:00","duration":"PT4H22M6S","caloriesBurnedSummary":{"period":"Activity","totalCalories":348},"heartRateSummary":{"period":"Activity","averageHeartRate":67,"peakHeartRate":82,"lowestHeartRate":55}}],"itemCount":7}'
+    http_version: 
+  recorded_at: Thu, 30 Jul 2015 13:52:06 GMT
+recorded_with: VCR 2.9.3

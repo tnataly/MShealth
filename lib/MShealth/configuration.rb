@@ -3,7 +3,7 @@ module MShealth
 
   class Configuration
 
-    attr_accessor :token, :refresh_token, :api_version
+    attr_accessor :token, :api_version
 
     def initialize
       @api_version = DEFAULT_VERSION

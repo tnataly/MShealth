@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.microsofthealth.net/V1/me/Devices/asd
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - bearer EwCYAvF0BAAUkWhN6f8bO0+g89MA1fmZueWyRkQAAUgjUEZIUhw+EbGV7++83/Q1MZbgUbg6eh1RhfVtlxx93T+AeuVYsxd0BWwu93RWNoW6p3QeJYuhZVz3W6ayLsFkWAZDejTDGU6WKGVLfmNPca0BLn5OpvtQIS4cOJTJKaE4ffzoBWgesX9X8nj4xTTs8HpjklfBIlAAedH0mJybydT84ZKXAtMBa/Wina4WaNBFP43xhKeBAPa27Wr6O3oqZvgMzURiSnLexNEEcnVXxaUH9HqOY6Ik5S9xGuA/xIdLRqeaFM9qZG4pJLJkEqdAGm/9nyRNU+8K56Nn73I1gpEAsQPJMo6sTuHKDErEdHdbL/ILhzDSLykyIxz7/qEDZgAACBywHKzlA0vraAEFCP9QrMEre9ZhvZXzdliwXDJwKmsCF7+ldRwBnqzpxczqTo9Toc/RV+N9UjOs7+QYxgEu+UX+biHMKkzba2e+PDru8S5gV4Axylfs1DKBxRwYVqgvckHWwkMW7kGH8kEyTq62F7Ywj+tyAPf+9KIwPyMDo3M7BvKwH3Ocqjs/HQFfJDsyUdB8IU0rH7hWGWQWNhsZW2QCGNhZp27qZCoU6l+3w3xGxmy+DFv1PUGZVXCDKNUgcrJRCxENWjeQDeQUr0HfNCr6UGkdBNPRVcUiQ0pKhWSZbAxrtW4Iw4oIbO7EO28nC8z3TYyx/rXPSqZMRhvpH693UuQM4YJLMTVXXoDSNo9MeLvu+5JY+cu0iLYYY45gEkCJGyLYn8J3sY3jy/bl6TwUpc3zUDkz5bzaDxA1VKc9BS+7ArAmDIhPUiGmDFWM9ySN2hDbTrpKtzWxR/Wx4rBP6FiniJiLBogSDwKaVAkkieaAAQ==
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      Appex-Activity-Id:
+      - b6911e30-c774-4dfc-951a-43913972f060
+      Set-Cookie:
+      - ai_session=e989fdfa10704c44bfe011279aee74ac|2015-07-30T15:11:05.0396227+00:00|2015-07-30T15:11:05.1333673+00:00;
+        expires=Thu, 30-Jul-2015 15:41:05 GMT; path=/
+      - ai_user=c685cf2386aa41ec96aad077dc7af91e|2015-07-30T15:11:05.0396227+00:00;
+        expires=Fri, 31-Dec-9999 23:59:59 GMT; path=/
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 30 Jul 2015 15:11:05 GMT
+      Content-Length:
+      - '188'
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":"BadArgument","message":"Errors found in query parameters,
+        see details...","details":[{"code":"InvalidFormat","message":"The device id
+        is invalid.","target":"deviceId"}]}}'
+    http_version: 
+  recorded_at: Thu, 30 Jul 2015 15:11:04 GMT
+recorded_with: VCR 2.9.3

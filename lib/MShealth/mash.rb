@@ -1,8 +1,6 @@
 require 'hashie'
-require 'time'
 
 module MShealth
-  #Reference the linkedin api wrapper
   class Mash < Hashie::Mash
     def initialize(hash)
       mash = super(hash)
