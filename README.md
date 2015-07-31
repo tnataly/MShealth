@@ -1,4 +1,4 @@
-# MShealth
+# MShealth [![Gem Version](https://badge.fury.io/rb/MShealth.svg)](http://badge.fury.io/rb/MShealth)
 
 Ruby API wrapper for the [Microsoft Health Cloud](http://developer.microsoftband.com/cloudAPI).
 
