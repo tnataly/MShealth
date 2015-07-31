@@ -77,16 +77,7 @@ module MShealth
 
     def activity(id:,**options)
       query = {}
-      query['activityIncludes'] = ""
-      query['activityIncludes'] += "Details," if options.key?(:details)
-      query['activityIncludes'] += "MinuteSummaries," if options.key?(:minute_summaries)
-      query['activityIncludes'] += "MapPoints," if options.key?(:map_points)
-      if query['activityIncludes'] == ""
-        query.delete('activityIncludes')
-      else
-        # Note: ...exclusive end, .. inclusice end
-        query['activityIncludes'] = query['activityIncludes'][0...-1]
-      end
+      query = handle_activity_include(query,options)
 
       response = handle_response("/"+configuration.api_version+"/me/Activities/"+id,
       :headers => {"Authorization" => "bearer "+configuration.token},
@@ -101,19 +92,8 @@ module MShealth
 
       query['startTime'] = start_time.iso8601
       query['endTime'] = end_time.iso8601
-
-
-      query['activityIncludes'] = ""
-      query['activityIncludes'] += "Details," if options.key?(:details)
-      query['activityIncludes'] += "MinuteSummaries," if options.key?(:minute_summaries)
-      query['activityIncludes'] += "MapPoints," if options.key?(:map_points)
-      if query['activityIncludes'] == ""
-        query.delete('activityIncludes')
-      else
-        query['activityIncludes'] = query['activityIncludes'][0...-1]
-      end
-
       query['activityTypes'] = options[:activity_types] if options.key?(:activity_types)
+      query = handle_activity_include(query,options)
 
       response = response = handle_response("/"+configuration.api_version+"/me/Activities",
       :headers => {"Authorization" => "bearer "+configuration.token},
@@ -123,30 +103,17 @@ module MShealth
 
       types = ['bike','freePlay','golf','guidedWorkout','run','sleep']
 
-      types.each do |type|
-        name = type + 'Activities'
-        if !response[name].nil?
-          response[name].each do |activity|
-            result << MShealth::Mash.new(activity)
-          end
-        end
-      end
+      result = extract_activities(types,response,result)
 
       while response.key?("nextPage")
         response = handle_response(response['nextPage'],:headers => {"Authorization" => "bearer "+configuration.token})
-        types.each do |type|
-          name = type + 'Activities'
-          if !response[name].nil?
-            response[name].each do |activity|
-              result << MShealth::Mash.new(activity)
-            end
-          end
-        end
+        result = extract_activities(types,response,result)
       end
 
       result
     end
 
+    private
     def handle_response(*args)
       response = self.class.get(*args)
 
@@ -170,6 +137,33 @@ module MShealth
       end
 
     end
+
+    def handle_activity_include(query,options)
+      query['activityIncludes'] = ""
+      query['activityIncludes'] += "Details," if options.key?(:details)
+      query['activityIncludes'] += "MinuteSummaries," if options.key?(:minute_summaries)
+      query['activityIncludes'] += "MapPoints," if options.key?(:map_points)
+      if query['activityIncludes'] == ""
+        query.delete('activityIncludes')
+      else
+        query['activityIncludes'] = query['activityIncludes'][0...-1]
+      end
+      query
+    end
+
+    def extract_activities(types,response,result)
+      types.each do |type|
+        name = type + 'Activities'
+        if !response[name].nil?
+          response[name].each do |activity|
+            result << MShealth::Mash.new(activity)
+          end
+        end
+      end
+      result
+    end
+
+
   end
 
 end

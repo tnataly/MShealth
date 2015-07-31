@@ -8,5 +8,13 @@ require "MShealth/errors"
 require 'time'
 
 module MShealth
-  # Your code goes here...
+  class << self
+    def client
+      @client ||= Client.new
+    end
+
+    def configure(&block)
+      client.configure(&block)
+    end
+  end
 end
